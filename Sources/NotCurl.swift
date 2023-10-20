@@ -61,7 +61,7 @@ extension URL: ExpressibleByArgument {
 
 extension KeyValue: ExpressibleByArgument {
     public init?(argument: String) {
-        let components = argument.split(separator: ":")
+        let components = argument.split(separator: ":", maxSplits: 1)
         if components.count != 2 {
             return nil
         }
